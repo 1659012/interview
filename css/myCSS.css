@@ -1,0 +1,94 @@
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .topnav a.nav-link {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+.sidenav {
+    height: 100%; 
+    width: 0;
+    position: fixed; 
+    z-index: 99 !important; 
+    top: 0;
+    right:0;
+    background-color:white; 
+    overflow-x: hidden;
+    padding-top: 100px;
+    transition: 0.3s ease;
+}
+
+
+.sidenav a.nav-link{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.sidenav .home-link{
+    color: white !important;
+    background-color: black !important;
+    margin-top: 40px;
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    text-decoration: none;
+    font-weight: lighter;
+    margin-left: 50px;
+}
+.sidenav .closebtn:hover{
+    color: black;
+}
+
+@media screen and (max-height: 1000px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/* ========================================= */
+.full-width{
+    padding: 40px 0;
+}
+/* carousel====================================== */
+.carousel-container{
+    /* padding: 40px 0; */
+}
+.slide-content{
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.carousel-caption img{
+    position: absolute;
+    width: 70%;
+    height: auto;
+    bottom: -130px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;    
+}
+/* ================================================= */
+.discover-container,.explore-container,.possibility-container, .licenses-container, footer{
+    /* text-align: center; */
+}
+
+.center-content{
+    text-align: center;
+}
