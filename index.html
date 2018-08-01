@@ -7,20 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lora|Nunito:300" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="./css/myCSS.css">
     <title>Han Hoan-Frontend</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Navbar brand</a>
-        <ul class="navbar-nav topnav" id="myTopnav">
+        <a class="navbar-brand" href="#">
+            <img src="./images/logo_white.png" alt="">
+        </a>
+        <ul class="navbar-nav topnav justified uppercase small-caption-title" id="myTopnav">
             <li class="nav-item">
-                <a class="nav-link" href="#home">home</a>
+                <a class="nav-link text-white" href="#home">home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#element">element</a>
+                <a class="nav-link" href="#element" id="element">element</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#pricing">pricing</a>
@@ -32,16 +34,102 @@
                 <a class="nav-link" href="#contact">contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#buy">buy now</a>
+                <a class="nav-link buyNow" href="#buy" id="buyNow">buy&nbsp;now</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item hambuger">
                 <a href="javascript:void(0);" class="nav-link icon" onclick="openNav()">
                     <i class="fa fa-bars"></i>
                 </a>
             </li>
         </ul>
     </nav>
-    <div id="mySidenav" class="sidenav">
+
+    <div class="hidden" id="collapse-menu">
+        <div class="row">
+            <div class="col-4">
+                <h6 class="small-caption-title">PAGES UI BUNDLE</h6>
+                <h3 class="large-section-title">A new page,</h3>
+                <h3 class="large-section-title">a new beginning...</h3>
+                <small class="light-text">Exclusively available at Envato Marketplace</small>
+                <a href="#" class="btn btn-dark buyNow" style="margin-top: 30px">Buy now</a>
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col uppercase">
+                        <h6 class="sub-menu-heading">UI Elements</h6>
+                        <ul class="sub-menu light-text">
+                            <li>
+                                <a href="#color">Colors</a>
+                            </li>
+                            <li>
+                                <a href="#icons">Icons</a>
+                            </li>
+                            <li>
+                                <a href="#buttons">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="#modals">Modals</a>
+                            </li>
+                            <li>
+                                <a href="#progress_bars">Progress &amp; Activity</a>
+                            </li>
+                            <li>
+                                <a href="#accordians">Accordians</a>
+                            </li>
+                            <li>
+                                <a href="#tabs">Tabs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col uppercase">
+                        <h6 class="sub-menu-heading">Forms</h6>
+                        <ul class="sub-menu light-text">
+                            <li>
+                                <a href="#form_elements">Form Elements</a>
+                            </li>
+                            <li>
+                                <a href="#form_layouts">Form Layouts</a>
+                            </li>
+                            <li>
+                                <a href="#form_validation">Form Validation</a>
+                            </li>
+                        </ul>
+                        <h6 class="sub-menu-heading">Other products</h6>
+                        <ul class="sub-menu light-text">
+                            <li>
+                                <a href="#" target="_blank">Webarch</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col uppercase">
+                        <h6 class="sub-menu-heading">Made with pages</h6>
+                        <ul class="sub-menu light-text">
+                            <li>
+                                <a href="#" target="_blank">Pages Admin</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Email</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Pages Frontend</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Calendar</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Social</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Builder</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav uppercase">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
             <i class="fa fa-close"></i>
         </a>
@@ -50,140 +138,150 @@
         <a class="nav-link" href="#pricing">pricing</a>
         <a class="nav-link" href="#portfolio">portfolio</a>
         <a class="nav-link" href="#contact">contact</a>
-        <a class="nav-link" href="#buy">buy now</a>
+        <a class="nav-link btn btn-outline-dark" href="#buy">buy now</a>
     </div>
 
     <div class="container-fluid carousel-container full-width">
-
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active slide-content" style='background: url("./images/bg_pattern_1.jpg");'>
-                    <img class="d-block w-100" src="./images/bg_elements_1.png" alt="First slide">
+                    <img class="d-block w-100 fixed-height" src="./images/bg_elements_1.png" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>...</h5>
-                        <p>...</p>
+                        <h1 class="caption-title">Something Different</h1>
+                        <a href="#" class="caption-link">Learn more</a>
                         <img src="./images/ipad_1.png" alt="">
                     </div>
+
                 </div>
                 <div class="carousel-item slide-content" style='background: url("./images/bg_pattern_2.jpg");'>
-                    <img class="d-block w-100" src="./images/bg_elements_2.png" alt="Second slide">
+                    <img class="d-block w-100 fixed-height" src="./images/bg_elements_2.png" alt="Second slide">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>...</h5>
-                        <p>...</p>
+                        <h1 class="caption-title">Something New</h1>
+                        <a href="#" class="caption-link">Learn more</a>
                         <img src="./images/ipad_4.png" alt="">
                     </div>
                 </div>
                 <div class="carousel-item slide-content" style='background: url("./images/bg_pattern_3.jpg");'>
-                    <img class="d-block w-100" src="./images/bg_elements_3.png" alt="Third slide">
+                    <img class="d-block w-100 fixed-height" src="./images/bg_elements_3.png" alt="Third slide">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>...</h5>
-                        <p>...</p>
-                        <img src="./images/ipad_3.png" alt="">
+                        <h1 class="caption-title">Something Exciting</h1>
+                        <a href="#" class="caption-link">Learn more</a>
+                        <img src="./images/ipad_1.png" alt="">
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <a class="carousel-control-prev adjusted-button-carousel" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <a class="carousel-control-next adjusted-button-carousel" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
 
     </div>
 
-    <div class="container-fluid discover-container full-width center-content">
+    <section class="container-fluid full-width center-content bg-white">
         <div class="discover-content">
-            <h5>DISCOVER</h5>
-            <h3>Something Different, Something New.</h3>
+            <h5 class="small-caption-title">DISCOVER</h5>
+            <h1 class="large-section-title">Something Different, Something New.</h1>
             <p>Our long standing vision has been to bypass the usual admin dashboard structure, and move forward with a more
                 sophisticated yet simple framework that would create a credible impact on the many conventional dashboard
                 users.
             </p>
-            <img src="./images/arrow_down.png" alt="">
+            <img src="./images/arrow_down.png" alt="" style="margin-bottom: 40px">
             <div class="row">
                 <div class="col-sm-6">
                     <img src="./images/ipad_2.jpg" alt="">
                 </div>
-                <div class="col-sm-6">
-                    <h3>Make your imagination</h3>
-                    <h3>Alive with pages.</h3>
-                    <h5>LAUNCH YOUR DESIGN ></h5>
+                <div class="col-sm-6 text-left middle-content">
+                    <h1 class="large-section-title">Make your imagination</h1>
+                    <h1 class="large-section-title">Alive with pages.&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                    <h5 class="small-caption-title" style="margin-top: 30px">LAUNCH YOUR DESIGN ></h5>
+
                     <p>Our long standing vision has been to bypass the usual admin dashboard structure, and move forward with
                         a more vary and sophisticated yet simple framework</p>
-                    <small>A product is accessible when all people—regardless of ability—can navigate it, understand it, and use
+                    <small class="light-text">A product is accessible when all people—regardless of ability—can navigate it, understand it, and use
                         it to achieve their goals.</small>
 
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container-fluid explore-container full-width center-content">
-        <div class="explore-content" style='background: url("./images/elements_1.png");'>
-            <h5>EXPLORE</h5>
-            <h3>Unlimited ways to organize your content</h3>
-            <button>Explore</button>
-            <img src="./images/iphone.png" alt="">
+    <section class="container-fluid full-width center-content bg-silver">
+        <div style='background: url("./images/elements_1.png")' class="adjusted-bg">
+            <div class="explore-content">
+                <h5 class="small-caption-title">EXPLORE</h5>
+                <h1 class="large-section-title">Unlimited ways to organize your content</h1>
+                <button id="explore-btn">Explore</button>
+                <img src="./images/iphone.png" alt="" id="myIphone">
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container-fluid  possibility-container full-width center-content">
+    <section class="container-fluid full-width center-content bg-white">
         <div class="possibility-content">
-            <img src="./images/arrow_down.png" alt="">
-            <h5>ENDLESS POSSIBILITIES</h5>
-            <h3>Page state of the art UI bundle</h3>
+            <img src="./images/arrow_down.png" alt="" style="margin-bottom: 40px">
+            <h5 class="small-caption-title">ENDLESS POSSIBILITIES</h5>
+            <h1 class="large-section-title">Page state of the art UI bundle</h1>
             <p>From hundreds of pre-made content block</p>
-            <div class="row">
+            <div class="row text-left" style="margin-top: 30px;">
                 <div class="col">
+                    <hr class="large-percent-black">
+                    <hr class="small-percent-silver">
                     <p>200%</p>
                     <small>Smoother</small>
                 </div>
                 <div class="col">
+                        <hr class="large-percent-black">
+                        <hr class="small-percent-silver">
                     <p>200%</p>
                     <small>Lighter</small>
                 </div>
                 <div class="col">
+                        <hr class="large-percent-black">
+                        <hr class="small-percent-silver">
                     <p>200%</p>
                     <small>Micro Awesomness</small>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container-fluid licenses-container full-width center-content">
+    <section class="container-fluid full-width center-content bg-brown text-white">
         <div class="licenses-content">
-            <h1>Crafted with detail for a great start! front-end plus back-end.</h1>
+            <h1 class="large-section-title">Crafted with detail for a great start!</h1>
+            <h1 class="large-section-title">front-end plus back-end.</h1>
             <img src="./images/themeforest_logo.png" alt="">
-            <p>Exclusive only at Envato Marketplace,</p>
+            <p class="light-text">Exclusive only at Envato Marketplace,</p>
             <p>Themeforest See Standard licenses & Extended licenses</p>
         </div>
-    </div>
+    </section>
 
     <footer>
         <div class="footer-content row">
-            <div class="col">
+            <div class="col text-left">
                 <img src="./images/logo_black.png" alt="">
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#" class="light-text">Home</a>
                     </li>
                     <li>
-                        <a href="#">Themeforest</a>
+                        <a href="#" class="light-text">Themeforest</a>
                     </li>
                     <li>
-                        <a href="#">Support</a>
+                        <a href="#" class="light-text">Support</a>
                     </li>
                     <li>
-                        <a href="#">Made with Pages</a>
+                        <a href="#" class="light-text">Made with Pages</a>
                     </li>
                 </ul>
             </div>
-            <div class="col">
+            <div class="col text-right">
                 <p>Exclusive only at Envato Marketplace,Themeforest See Standard licenses & Extended licenses</p>
-                <p>Copyright © 2014 REVOX. All Rights Reserved.</p>
+                <p class="light-text">Copyright © 2014 REVOX. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -199,6 +297,29 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
+            $("#element").hover(
+                function () {
+                    $("#collapse-menu").removeClass("hidden");
+                }, function () {
+                    $("#collapse-menu").hover(
+                        function () {
+                            $(this).removeClass("hidden");
+                        }, function () {
+                            $(this).addClass("hidden");
+                        }
+                    );
+                }
+            );
+            $(window).scroll(function(){
+            let x = $(window).scrollTop();            
+            if(x> 1200 && x<1800){
+                // console.log(x);
+                let y= (x-1200)/10;
+                // console.log('y='+y);
+                $("#myIphone").css("margin-top", y);
+            }
+            });
+    
         }); 
     </script>
 </body>
